@@ -1,0 +1,189 @@
+<!-- search result -->
+
+<!DOCTPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="srcStyle.css">
+		<title>Google</title>
+
+		<link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="icons/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+		<link rel="manifest" href="icons/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+
+		<script type="text/javascript">
+			function qs(search_for) {
+				var query = window.location.search.substring(1);
+				var parms = query.split('&');
+				for (var i=0; i<parms.length; i++) {
+					var pos = parms[i].indexOf('=');
+					if (pos > 0  && search_for == parms[i].substring(0,pos)) {
+						return parms[i].substring(pos+1);;
+					}
+				}
+				return "";
+			}
+		</script>
+	</head>
+	<!-- Navagation Area -->
+	<body style="background-color:white;" class="wrapper">
+		<nav class="nav">
+			<div class="menu">
+				<a class="menu-link">
+					<svg class="menu-icon" focusable="false" viewBox="0 0 24 24">
+						<path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"> </path>
+					</svg>
+				</a>
+				<button>Sign In</button> 
+			</div>
+		</nav>
+		<!-- search bar -->
+		<div class="searchArea">
+			<section>
+		
+				<form action="searchPage.html">
+					<div class="s-box">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false" class = "search-x">
+							<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+						</svg>
+
+						<svg focusable="false" viewBox="0 0 24 24" class="search-icon">
+							<path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">	
+							</path>
+						</svg>
+					
+
+						<svg focusable="false" viewBox="0 0 24 24" class="search-icon-2">
+							<path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">	
+							</path>
+						</svg>
+						
+
+						<center>
+								<input type="search" name="q" class="s-input" id="searchbar">
+								<span class = "line"></span>
+						</center>
+					</div>
+					<!-- the all tab -->
+					<div class="all-tab" aria-current="page">
+						<span class="all-tab-style" style="height:16px;width:16px">
+							<svg focusable="false" viewBox="0 0 24 24">
+								<path fill="#34a853" d="M10 2v2a6 6 0 0 1 6 6h2a8 8 0 0 0-8-8"></path>
+								<path fill="#ea4335" d="M10 4V2a8 8 0 0 0-8 8h2c0-3.3 2.7-6 6-6"></path>
+								<path fill="#fbbc04" d="M4 10H2a8 8 0 0 0 8 8v-2c-3.3 0-6-2.69-6-6"></path>
+								<path fill="#4285f4" d="M22 20.59l-5.69-5.69A7.96 7.96 0 0 0 18 10h-2a6 6 0 0 1-6 6v2c1.85 0 3.52-.64 4.88-1.68l5.69 5.69L22 20.59"></path>
+							</svg>
+						</span>
+						All
+						<div class="all-tab-bottom"></div>
+					</div>
+					<!-- the img tab -->
+					<div class="img-tab">
+						<a href="" class="no-underline">
+							<span class="img-tab-style" style="height:16px;width:16px">
+								<svg focusable="false" viewBox="0 0 24 24">
+								<path d="M14 13l4 5H6l4-4 1.79 1.78L14 13zm-6.01-2.99A2 2 0 0 0 8 6a2 2 0 0 0-.01 4.01zM22 5v14a3 3 0 0 1-3 2.99H5c-1.64 0-3-1.36-3-3V5c0-1.64 1.36-3 3-3h14c1.65 0 3 1.36 3 3zm-2.01 0a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h7v-.01h7a1 1 0 0 0 1-1V5"></path>
+							</svg>
+						</span>Images</a>
+					</div>
+					<!-- the vid tab -->
+					<div class="vid-tab">
+						<a class="no-underline" href="">
+							<span class="vid-tab-style" style="height:16px;width:16px">
+								<svg focusable="false" viewBox="0 0 24 24">
+									<path d="M10 16.5l6-4.5-6-4.5v9zM5 20h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1zm14.5 2H5a3 3 0 0 1-3-3V4.4A2.4 2.4 0 0 1 4.4 2h15.2A2.4 2.4 0 0 1 22 4.4v15.1a2.5 2.5 0 0 1-2.5 2.5"></path>
+								</svg>
+							</span>Videos
+						</a>
+					</div>
+					<!-- the news tab -->
+					<div class="news-tab">
+						<a class="no-underline" href="">
+							<span class="news-tab-style" style="height:16px;width:16px">
+								<svg focusable="false" viewBox="0 0 24 24">
+									<path d="M12 11h6v2h-6v-2zm-6 6h12v-2H6v2zm0-4h4V7H6v6zm16-7.22v12.44c0 1.54-1.34 2.78-3 2.78H5c-1.64 0-3-1.25-3-2.78V5.78C2 4.26 3.36 3 5 3h14c1.64 0 3 1.25 3 2.78zM19.99 12V5.78c0-.42-.46-.78-1-.78H5c-.54 0-1 .36-1 .78v12.44c0 .42.46.78 1 .78h14c.54 0 1-.36 1-.78V12zM12 9h6V7h-6v2"></path>
+								</svg>
+							</span>News</a>
+						</div>
+					<!-- the more tab -->
+					<div class="more-tab">
+						<span class="more-tab-style" style="height:16px;line-height:16px;width:16px">
+							<svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+								<path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path>
+							</svg>
+						</span>More
+					</div>
+					<div class = "hor-line"></div>
+				</form>
+				<!-- the result body -->
+				<div class="results">
+					About 3 Results (0.1 seconds)
+				</div>	
+
+			</section>
+		</div>
+			<div class = "logo">
+				<img src = "Img/src_logo.png" width="92" height="30"></img>
+			</div>
+		</div>
+		<!-- the search result links -->
+		<div class="result-list">
+			<p> https://en.wikipedia.org/Search 1 › query 1 › query 1 </p>
+			<a href="" class="search-link">Search Result - 1 | Wikipedia</a>
+			<p class="search-desc">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+			<p class="search-desc">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+			<a href="" class="search-suggestion">Result 1 suggestion</a>
+
+			<p> https://youtube.com/Search 2 › query 2 › query 2 </p>
+			<a href="" class="search-link">Search Result - 2 | Youtube</a>
+			<p class="search-desc">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+			<a href="" class="search-suggestion">Result 2 | Youtube</a>
+
+			<p> https://www.britannica.com/Search 3 › query 3› query 3 </p>
+			<a href="" class="search-link">Search Result - 3 |  Britannica</a>
+			<p class="search-desc">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+			<a href="" class="search-suggestion">Result 1 | Wikipedia</a>
+		</div>
+		<div class="foot">
+			<div class="foot-text">
+				<p class = "foot-location-text">Earth, Earth</p>
+				<p class = "foot-location-text2"> - From your Internet address - Use Precise Location - Learn More</p>
+			</div>
+				
+			<div class = "foot-buttons-posistion">
+				<div class="foot-buttons">
+						<a href="https://support.google.com/websearch/?p=ws_results_help&hl=en&fg=1">Help</a>
+						<a href="">Send Feedback</a>
+						<a href="https://policies.google.com/privacy?hl=en&fg=1">Privacy</a>
+						<a href="https://policies.google.com/terms?hl=en&fg=1">Terms</a>
+				</div>
+			</div>
+		</div>
+		<a href="" class = "foot-percise-location">Use Precise Location</a>
+		<a href="" class = "foot-learn-more">Learn More</a>
+
+	</body>
+
+	<script type="text/javascript">
+		document.getElementById("searchbar").value = qs("q").replace(/\+/g," ");
+	</script>
+</html>
+
+
+
+
+
